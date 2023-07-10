@@ -6,6 +6,7 @@
     --blue-brand-color: #4D5AE5;
     --white: #fff;
     --btn-text: #e7e9fc;
+    --light-slate: #8e8f99;
 }
 body {
     font-family: "Roboto", sans-serif;
@@ -190,7 +191,15 @@ ul {
     padding: 120px 0;
     margin: 0 auto;
 }
-
+.icon-adv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;
+}
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -303,6 +312,51 @@ ul {
     padding: 32px 16px;
     width: 264px;
 
+}
+/* Customers */
+.customers {
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+.title-customers {
+    color: var(--navyblue);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+    text-align: center;
+}
+.customers-list {
+    display: flex;
+    gap: 24px;
+}
+.customers-item {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+}
+.customer-link {
+    border: 1px solid #8e8f99;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-slate);
+}
+.customer-link:hover{
+    color: var(--ocean);
+    border-color: var(--ocean);
+} 
+.customer-link:focus {
+    color: var(--ocean);
+    border-color: var(--ocean);
+}
+.customers-icon {
+    fill: currentColor;
 }
 /* Footer */
 .page-footer {
@@ -422,18 +476,5 @@ line-height: 1.17;
 }
 
 
-.customers {
-    margin: 0 auto;
-    padding: 120px 0;
-}
-.title-customers {
-    color: var(--navyblue);
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-        margin-bottom: 72px;
-     text-align: center;
-}
+
 
