@@ -105,13 +105,15 @@ ul {
     list-style: none;
     padding: 24px 0;
     margin: 0 auto;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
-.navigation {
+.current {
     position: relative;
     color: var(--ocean);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-nav::after {
+.navigation::after {
     content:"";
     left: 0;
     position: absolute;
@@ -315,6 +317,9 @@ ul {
     border-radius: 0px 0px 4px 4px;
     margin: 0 auto;
     min-width: 264px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .profession {
    font-size: 16px;
@@ -322,13 +327,43 @@ ul {
     letter-spacing: 0.02em; 
     text-align: center;
 }
+.social-icons-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.social-icons-item {
+    width: 40px;
+    height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-icons-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    background-color: var(--blue-brand-color);
+    justify-content: center;
+}
+.social-icons-link:hover {
+    background-color: var(--ocean);
+}
+.social-icons-link:focus {
+    background-color: var(--ocean);
+}
+.social-icon {
+    fill: var(--cloud);
+}
+
 .list-team {
     display: flex;
     gap: 24px;
 }
 .member-div {
-    padding: 32px 16px;
+    
     width: 264px;
+    padding: 32px 0;
 
 }
 /* Customers */
