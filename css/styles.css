@@ -167,8 +167,8 @@ ul {
      margin: 0 auto;
  }
  .main-page-section {
-     background-color: var(--navyblue);
-     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office.jpg);
+    background-color: var(--navyblue);
+     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -328,6 +328,7 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em; 
     text-align: center;
+    margin-bottom: 8px;
 }
 .social-icons-list {
     display: flex;
@@ -422,6 +423,7 @@ ul {
 }
 .customers-icon {
     fill: currentColor;
+    
 }
 /* Footer */
 .page-footer {
@@ -574,17 +576,27 @@ line-height: 1.17;
 .item-link-project {
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item-link-project:focus .kind-project {
+    transform: translateY(0%);
+}
+.item-link-project:hover .kind-project {
+    transform: translateY(0%);
+}
+.item-link-project:hover{
     box-shadow:  1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.item-link-project:hover .kind-project {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-    transform: translateY(0%);
+.item-link-project:focus {
+    box-shadow: 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
 .text-overlay {
     position: absolute;
     top: 0;
@@ -600,6 +612,9 @@ line-height: 1.17;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-link-project:hover .text-overlay {
+    transform: translateY(0);
+}
+.item-link-project:focus .text-overlay {
     transform: translateY(0);
 }
 .div-project {
